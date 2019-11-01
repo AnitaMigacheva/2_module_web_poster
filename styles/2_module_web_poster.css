@@ -1,0 +1,8 @@
+@font-face { font-family: 'PosterBodoniBT-Roman';  src: local('PosterBodoniBT-Roman'), url('https://nomail.com.ua/files/woff/cdb879edc5f4327db2dbd5b1893f44bb.woff') format('woff'); }
+
+
+div {
+  font-family: 'PosterBodoniBT-Roman';
+  /* font-family: 'Poster Bodoni Win95BT', arial; */
+  font-size: 100px;
+}
