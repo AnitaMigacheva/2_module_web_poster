@@ -1,4 +1,5 @@
 @import "reset.css";
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -7,7 +8,12 @@
 body {
   background: #C50000;
   font-family: 'Neue Machina';
-  overflow: hidden;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
 }
 .logo {
   position: fixed;
@@ -15,21 +21,36 @@ body {
   width: 100px;
   min-width: 80px;
 }
-
+footer,
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 80%;
+}
+footer {
+  align-items: flex-end;
+}
 .time,
 .day {
   font-size: 10vw;
   color: #C50000;
   font-weight: bold;
   -webkit-text-stroke: 0.5px white;
-  line-height: 90%;
+  line-height: 80%;
 }
-.time {
-  align-self: flex-end;
-}
-.lecture {
-  align-self: flex-end;
+.lecture-logo {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.lecture-name {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+}
+.adress span {
+  margin-top: 20px;
+  display: block;
 }
