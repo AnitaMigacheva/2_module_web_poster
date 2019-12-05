@@ -1,0 +1,35 @@
+@import "reset.css";
+* {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+body {
+  background: #C50000;
+  font-family: 'Neue Machina';
+  overflow: hidden;
+}
+.logo {
+  position: fixed;
+  margin: 4vh 6vw;
+  width: 100px;
+  min-width: 80px;
+}
+
+.time,
+.day {
+  font-size: 10vw;
+  color: #C50000;
+  font-weight: bold;
+  -webkit-text-stroke: 0.5px white;
+  line-height: 90%;
+}
+.time {
+  align-self: flex-end;
+}
+.lecture {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

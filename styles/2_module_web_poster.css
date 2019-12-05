@@ -11,6 +11,8 @@ html {
 }
 body {
   background: #C50000;
+  font-family: 'Neue Machina';
+  overflow: hidden;
 }
 .logo {
   position: fixed;
@@ -39,9 +41,22 @@ body {
 } */
 
 .unicorn img {
-  width: 26%;
+  width: 300px;
   mix-blend-mode: darken;
   padding-bottom: 8%;
+  position: relative;
+}
+.unicorn::after {
+  content: "КАК\AУХАЖИВАТЬ\AЗА ЕДИНОРОГОМ?";
+  white-space: pre;
+  position: absolute;
+  font-weight: bold;
+  font-size: 1vw;
+  z-index: 1;
+  color: white;
+  letter-spacing: 0.04em;
+  top: 400px;
+  left: 30px;
 }
 .unicorn {
   width: 100%;
@@ -51,20 +66,45 @@ body {
   justify-content: center;
   position: relative;
 }
-p {
+.footer {
+  width: 100vw;
+  height: 100vh;
+  padding: 6% 10%;
   position: absolute;
-  font-family: 'Neue Machina';
-  font-weight: bold;
-  color: white;
-  letter-spacing: 0.04em;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-between;
 }
-
-
-
 .time,
 .day {
   font-size: 10vw;
   color: #C50000;
+  font-weight: bold;
   -webkit-text-stroke: 0.5px white;
   line-height: 90%;
 }
+.time {
+  align-self: flex-end;
+
+}
+.lecture {
+  align-self: flex-end;
+
+}
+/*
+img.test {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+  animation-name: test;
+  animation-delay: 3s;
+  animation-duration: 5s;
+}
+
+@keyframes test {
+  to {
+    transform: scale(89);
+  }
+}  */
