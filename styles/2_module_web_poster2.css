@@ -1,14 +1,22 @@
 @import "reset.css";
-
+@import "fonts.css";
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 body {
+  margin: 0;
+padding: 0;
+border: 0;
+outline: 0;
+  height: 100%;
+  margin: 0;
   background: #C50000;
   font-family: 'Neue Machina';
   color: white;
+}
+.wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -25,7 +33,6 @@ footer,
 header {
   display: flex;
   justify-content: space-between;
-  margin-top: 20px;
   width: 80%;
 }
 footer {
@@ -33,7 +40,7 @@ footer {
 }
 .time,
 .day {
-  font-size: 10vw;
+  font-size: 90px;
   color: #C50000;
   font-weight: bold;
   -webkit-text-stroke: 0.5px white;
@@ -43,14 +50,57 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 160px;
+  position: relative;
 }
 .lecture-name {
-  font-size: 30px;
+  font-size: 3vw;
   font-weight: bold;
   line-height: 100%;
   letter-spacing: 0.04em;
 }
+.lecture-logo_eye {
+  position: absolute;
+  width: 60%;
+}
+.lecture-logo_text {
+  width: 100%;
+}
 .adress span {
   margin-top: 20px;
   display: block;
+}
+.adress {
+  font-size: 14px;
+  line-height: 130%;
+}
+.lecture-logo_text {
+  animation-name: rotation;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+@media (max-width: 1024px) {
+
+}
+
+
+@media (max-width: 768px) {
+  .adress {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 320px) {
+  .time,
+  .day {
+    font-size: 30px;
+  }
 }

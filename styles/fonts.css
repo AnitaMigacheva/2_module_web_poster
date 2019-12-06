@@ -1,0 +1,15 @@
+@font-face {
+  font-family: "Neue Machina";
+  font-weight: light;
+  src: url(Neue Machina.otf) format('truetype');
+}
+@font-face {
+  font-family: "Neue Machina";
+  font-weight: regular;
+  src: url(Neue Machina.otf) format('truetype');
+}
+@font-face {
+  font-family: "Neue Machina";
+  font-weight: extrabold;
+  src: url(Neue Machina.otf) format('truetype');
+}
