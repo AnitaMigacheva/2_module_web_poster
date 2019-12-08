@@ -1,5 +1,6 @@
 @import "reset.css";
 @import "fonts.css";
+
 * {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
@@ -22,19 +23,19 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  height: 100vh;
+  height: 88vh;
+  margin: 40px 100px;
 }
 .logo {
-  position: fixed;
-  margin: 4vh 6vw;
   width: 100px;
-  min-width: 80px;
+  align-self: flex-start;
+  margin-bottom: 20px;
 }
 footer,
 header {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
 }
 footer {
   align-items: flex-end;
@@ -47,6 +48,9 @@ footer {
   -webkit-text-stroke: 0.5px white;
   line-height: 80%;
 }
+.time {
+  text-align: right;
+}
 .lecture-logo {
   display: flex;
   align-items: center;
@@ -54,18 +58,16 @@ footer {
   width: 160px;
   position: relative;
 }
-.lecture-name {
-  font-size: 3vw;
-  font-weight: bold;
-  line-height: 100%;
-  letter-spacing: 0.04em;
-}
 .lecture-logo_eye {
   position: absolute;
   width: 60%;
 }
 .lecture-logo_text {
   width: 100%;
+  animation-name: rotation;
+  animation-duration: 9s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
 }
 .adress span {
   margin-top: 20px;
@@ -75,12 +77,7 @@ footer {
   font-size: 14px;
   line-height: 130%;
 }
-.lecture-logo_text {
-  animation-name: rotation;
-  animation-duration: 9s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
+
 @keyframes rotation {
   100% {
     transform: rotate(360deg);
@@ -88,7 +85,7 @@ footer {
 }
 
 .i {
-  z-index: -1;
+  z-index: 2;
   width: 800px;
   filter: blur(15px);
   display: block;
@@ -100,11 +97,36 @@ footer {
 }
 .i:hover {
   filter: none;
+  transition: 2s ;
 }
+
 @keyframes translate {
   100% {
     transform: translateY(900px);
   }
+}
+
+.lecture-name {
+  font-size: 30px;
+  font-weight: bold;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  position: relative;
+  z-index: 3;
+}
+.lecture-name:hover::after {
+  content: "Мы проводим цикл лекций, на которых подробно расскажем о всех тонкостях ухода за единорогом. Лекции будут полезны тем, кто уже завел или планирует завести это загадочное животное.";
+  font-size: 0.6em;
+  background: #C21010;
+  padding: 24px;
+  font-weight: 300;
+  line-height: 130%;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);;
+  width: 100%;
+  position: absolute;
+  top: -100%;
+  right: -60px;
+  letter-spacing: 0.1;
 }
 
 @media (max-width: 1024px) {
@@ -112,15 +134,52 @@ footer {
 }
 
 
+@media (max-width: 1024px) {
+
+}
+
 @media (max-width: 768px) {
   .adress {
     font-size: 12px;
   }
-}
+  .lecture-name {
+    font-size: 22px;
+  }
+  .wrapper {
+    margin: 20px 60px;
+  }
+  .time,
+  .day {
+    font-size: 90px;
+  }
+  .logo {
+    width: 80px;
+    margin-bottom: 10px;
+  }
 
+}
+@media (max-width: 480px) {
+  .time,
+  .day {
+    font-size: 30px;
+  }
+  .logo {
+    width: 60px;
+  }
+  .lecture-name {
+    font-size: 20px;
+  }
+  .time,
+  .day {
+    font-size: 80px;
+  }
+}
 @media (max-width: 320px) {
   .time,
   .day {
     font-size: 30px;
+  }
+  .logo {
+    width: 50px;
   }
 }
