@@ -25,6 +25,7 @@ body {
   justify-content: space-between;
   height: 88vh;
   margin: 40px 100px;
+  position: relative;
 }
 .logo {
   width: 100px;
@@ -146,7 +147,7 @@ footer {
     font-size: 22px;
   }
   .wrapper {
-    margin: 20px 60px;
+    margin: 20px 50px;
   }
   .time,
   .day {
@@ -156,7 +157,9 @@ footer {
     width: 80px;
     margin-bottom: 10px;
   }
-
+  .lecture-logo {
+    width: 120px;
+  }
 }
 @media (max-width: 480px) {
   .time,
@@ -171,15 +174,32 @@ footer {
   }
   .time,
   .day {
-    font-size: 80px;
+    font-size: 70px;
+  }
+  .time {
+    position: absolute;
+    left: calc(100% - 120px)
+  }
+  .wrapper {
+    margin: 10px 30px;
   }
 }
 @media (max-width: 320px) {
   .time,
   .day {
-    font-size: 30px;
+    font-size: 54px;
   }
-  .logo {
-    width: 50px;
+  .time {
+    position: absolute;
+    left: calc(100% - 90px)
+  }
+  .wrapper {
+    margin: 10px 20px;
+  }
+  .lecture-name {
+    font-size: 18px;
+  }
+  .adress {
+    font-size: 10px;
   }
 }
