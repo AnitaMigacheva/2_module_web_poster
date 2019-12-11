@@ -106,7 +106,9 @@ footer {
     transform: translateY(900px);
   }
 }
+.icon-info {
 
+}
 .lecture-name {
   font-size: 30px;
   font-weight: bold;
@@ -115,18 +117,23 @@ footer {
   position: relative;
   z-index: 3;
 }
-.lecture-name:hover::after {
-  content: "Мы проводим цикл лекций, на которых подробно расскажем о всех тонкостях ухода за единорогом. Лекции будут полезны тем, кто уже завел или планирует завести это загадочное животное.";
-  font-size: 0.6em;
-  background: #C21010;
-  padding: 24px;
+.lecture-name::before {
+  content: "*";
+  font-size: 2em;
+  font-weight: 300;
+  top: -0.5em;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+}
+.lecture-name::before:hover {
+  content: "Мы проводим цикл лекций, на\00A0которых подробно расскажем о\00A0всех тонкостях ухода\00A0за\00A0единорогом. Лекции будут полезны\00A0тем, кто уже завел или планирует завести это загадочное\00A0животное.";
+  font-size: 12px;
   font-weight: 300;
   line-height: 130%;
-  box-shadow: 0 0 8px rgba(0,0,0,0.3);;
-  width: 100%;
+  width: 120%;
   position: absolute;
-  top: -100%;
-  right: -60px;
+  top: -80%;
   letter-spacing: 0.1;
 }
 
