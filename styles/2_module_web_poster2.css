@@ -238,3 +238,7 @@ footer {
     font-size: 10px;
   }
 }
+
+input:checked + .unicorn {
+  filter: none;
+}
