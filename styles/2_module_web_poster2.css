@@ -111,7 +111,7 @@ footer {
 
 @keyframes translate {
   100% {
-    transform: translateY(900px);
+    transform: translateY(-900px);
   }
 }
 
