@@ -11,27 +11,36 @@ body {
   padding: 0;
   border: 0;
   outline: 0;
-  height: 100%;
+  height: 100vh;
   margin: 0;
   background: #C21010;
   font-family: 'Neue Machina';
   color: white;
   overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.wrapper {
+  height: 82vh;
+  margin: 20px 10% 0;
 }
 .wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  height: 82vh;
-  margin: 40px 10%;
+  height: 90vh;
   position: relative;
+}
+.wrapper2 {
+  width: 100%;
 }
 .logo {
   width: 100px;
   align-self: flex-start;
   margin-bottom: 20px;
-  margin: 40px 10% 10px;
+  position: absolute;
+  z-index: 1;
 }
 footer,
 header {
@@ -44,9 +53,12 @@ footer {
   align-items: flex-end;
   position: relative;
 }
+header {
+  padding-top: 30px;
+}
 .time,
 .day {
-  font-size: 10vw;
+  font-size: 100px;
   color: rgba(0,0,0,0);
   font-weight: bold;
   -webkit-text-stroke: 0.5px white;
@@ -62,8 +74,6 @@ footer {
   justify-content: center;
   width: 160px;
   position: relative;
-  /* background-image: url(../img/u.png);
-  background-size: 100%; */
 }
 .lecture-logo_eye {
   position: absolute;
@@ -81,8 +91,10 @@ footer {
   display: block;
 }
 .adress {
+  font-weight: 300;
   font-size: 14px;
   line-height: 130%;
+  letter-spacing: 0.04em;
 }
 
 @keyframes rotation {
@@ -90,9 +102,8 @@ footer {
     transform: rotate(360deg);
   }
 }
-
 .unicorn {
-  z-index: -1;
+  z-index: 1;
   width: 800px;
   filter: blur(15px);
   width: 88vw;
@@ -102,7 +113,6 @@ footer {
   animation-duration: 28s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
-
 }
 .unicorn:hover {
   filter: none;
@@ -130,7 +140,24 @@ footer {
   position: absolute;
   width: 30px;
   height: 30px;
+  animation: 6s ease 2s infinite shake;
 }
+
+@keyframes shake {
+  2%, 6% {
+    transform: rotate(20deg);
+  }
+  4%, 8% {
+    transform: rotate(-20deg);
+  }
+  10%, 16% {
+    transform: rotate(20deg);
+  }
+  16% {
+    transform: rotate(0);
+  }
+}
+
 .icon-info:hover::before {
   content: "Мы проводим цикл лекций, на\00A0которых подробно расскажем о\00A0всех тонкостях ухода\00A0за\00A0единорогом. Лекции будут полезны\00A0тем, кто уже завел или планирует завести это загадочное\00A0животное.";
   font-size: 12px;
@@ -154,34 +181,33 @@ footer {
     font-size: 140px;
   }
   .wrapper {
-    margin: 40px 20%;
+    margin: 40px 20% 0;
   }
   .lecture-logo {
     width: 190px;
   }
 }
 
-@media (max-width: 1024px) {
+
+
+@media (min-width: 1024px) and (max-width: 1366px) {
   .time,
   .day {
     font-size: 110px;
   }
   .wrapper {
-    margin: 40px 14%;
+    margin: 20px 14% 0;
   }
 }
-
-
 
 @media (max-width: 768px) {
   .adress {
     font-size: 12px;
   }
   .lecture-name {
-    font-size: 30px;
+    font-size: 26px;
   }
-  .wrapper,
-  .logo {
+  .wrapper {
     margin: 20px 50px;
   }
   .logo {
@@ -189,7 +215,11 @@ footer {
     margin-bottom: 10px;
   }
   .lecture-logo {
-    width: 150px;
+    width: 130px;
+  }
+  .time,
+  .day {
+    font-size: 80px;
   }
 }
 
@@ -211,34 +241,24 @@ footer {
   .wrapper {
     margin: 30px 30px;
   }
-  .logo {
-    margin: 30px 30px 10px;
+  .lecture-logo {
+    width: 110px;
   }
 }
 
 @media (max-width: 320px) {
   .time,
   .day {
-    font-size: 54px;
+    font-size: 56px;
   }
   .time {
     position: absolute;
     left: calc(100% - 90px);
   }
-  .wrapper {
-    margin: 10px 20px;
-  }
-  .logo {
-    margin: 10px 20px;
-  }
   .lecture-name {
     font-size: 18px;
   }
   .adress {
-    font-size: 10px;
+    font-size: 12px;
   }
-}
-
-input:checked + .unicorn {
-  filter: none;
 }
