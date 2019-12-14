@@ -102,10 +102,11 @@ header {
     transform: rotate(360deg);
   }
 }
+
 .unicorn {
   z-index: 1;
   width: 800px;
-  filter: blur(15px);
+  filter: blur(18px);
   width: 88vw;
   display: block;
   position: absolute;
@@ -118,10 +119,53 @@ header {
   filter: none;
   transition: 2s;
 }
+.unicorn:not(:hover) {
+  filter: blur(18px);
+  transition: 2s;
+}
+
+.pattern {
+  background-size: 500px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 400%;
+  animation: scroll linear 20s infinite;
+}
+
+@keyframes scroll {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+
+  to {
+    transform: translate3d(-4000px, 0, 0);
+  }
+}
+
 
 @keyframes translate {
   100% {
     transform: translateY(-900px);
+  }
+}
+
+.unicorn2 {
+  opacity: 0;
+  animation: 1s ease 8s appear;
+  z-index: 1;
+  width: 800px;
+  filter: blur(18px);
+  width: 88vw;
+  display: block;
+  position: absolute;
+  transform: translateY(900px);
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
   }
 }
 
@@ -187,8 +231,6 @@ header {
     width: 190px;
   }
 }
-
-
 
 @media (min-width: 1024px) and (max-width: 1366px) {
   .time,
