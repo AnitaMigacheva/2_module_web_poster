@@ -25,7 +25,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  height: 10vh;
+  height: 90vh;
   margin: 0 10%;
   position: relative;
 }
@@ -237,7 +237,7 @@ div.unicorn {
     width: 70px;
   }
   .lecture-name {
-    font-size: 22px;
+    font-size: 24px;
   }
   .time,
   .day {
