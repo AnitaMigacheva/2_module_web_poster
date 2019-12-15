@@ -105,7 +105,7 @@ header {
   transition: 2s;
 } */
 div.unicorn {
-  background-image: url("../img/back.png");
+  background-image: url("../img/back.jpg");
   background-size: 100%;
   background-repeat: repeat-y;
   z-index: 1;
@@ -146,13 +146,15 @@ div.unicorn {
   z-index: 3;
 }
 .icon-info {
-  font-size: 4em;
-  font-weight: 300;
-  bottom: 60%;
+  bottom: 120px;
   position: absolute;
   width: 30px;
   height: 30px;
+}
+.icon-info img {
   animation: 6s ease 2s infinite shake;
+  width: 34px;
+  height: 34px;
 }
 
 @keyframes shake {
@@ -171,17 +173,56 @@ div.unicorn {
 }
 
 .icon-info:hover::before {
-  content: "Мы проводим цикл лекций, на\00A0которых подробно расскажем о\00A0всех тонкостях ухода\00A0за\00A0единорогом. Лекции будут полезны\00A0тем, кто уже завел или планирует завести это загадочное\00A0животное.";
-  font-size: 12px;
+  content: "«Бестия»\00A0проводит цикл лекций, на\00A0которых подробно расскажут о\00A0всех тонкостях ухода за\00A0единорогом. Лекции будут полезны\00A0тем, кто уже завел или\00A0планирует завести это загадочное\00A0животное.";
+  font-size: 16px;
   font-weight: 300;
   line-height: 130%;
-  width: 20em;
+  width: 18em;
   position: absolute;
-  top: -80%;
+  top: -310%;
   letter-spacing: 0.1em;
+  color: white;
+  z-index: 2;
+}
+.icon-info:hover img {
+  opacity: 0;
 }
 
-@media (min-width: 1366px) {
+@media (min-width: 1680px) {
+  .icon-info {
+    width: 44px;
+    height: 44px;
+  }
+  .adress {
+    font-size: 18px;
+  }
+  .time,
+  .day {
+    font-size: 140px;
+  }
+  .wrapper {
+    margin: 0 18%;
+  }
+  .lecture-logo {
+    width: 200px;
+  }
+  .lecture-name {
+    font-size: 40px;V
+  }
+  .icon-info {
+    width: 44px;
+    height: 44px;
+    bottom: 150px;
+  }
+  .icon-info:hover::before {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 130%;
+    width: 22em;
+    top: -240%;
+  }
+}
+@media (min-width: 1366px) and (max-width: 1680px){
   .adress {
     font-size: 16px;
   }
@@ -190,14 +231,25 @@ div.unicorn {
     font-size: 140px;
   }
   .wrapper {
-    margin: 0 20%;
+    margin: 0 18%;
   }
   .lecture-logo {
-    width: 200px;
+    width: 180px;
+  }
+  .lecture-name {
+    font-size: 38px;
+  }
+  .icon-info {
+    width: 40px;
+    height: 40px;
+    bottom: 130px;
+  }
+  .icon-info:hover::before {
+    top: -270%;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 1024px) and (max-width: 1366px) {
   .time,
   .day {
     font-size: 130px;
@@ -207,6 +259,20 @@ div.unicorn {
   }
   .lecture-name {
     font-size: 38px;
+  }
+  .icon-info {
+    bottom: 140px;
+  }
+  .icon-info img {
+    width: 34px;
+    height: 34px;
+  }
+  .icon-info:hover::before {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 130%;
+    width: 22em;
+    top: -390%;
   }
 }
 
@@ -224,11 +290,25 @@ div.unicorn {
     width: 80px;
   }
   .lecture-logo {
-    width: 180px;
+    width: 160px;
   }
   .time,
   .day {
-    font-size: 100px;
+    font-size: 86px;
+  }
+  .icon-info {
+    bottom: 100px;
+  }
+  .icon-info:hover::before {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 130%;
+    width: 22em;
+    top: -320%;
+  }
+  .icon-info img {
+    width: 34px;
+    height: 34px;
   }
 }
 
@@ -237,7 +317,7 @@ div.unicorn {
     width: 70px;
   }
   .lecture-name {
-    font-size: 24px;
+    font-size: 22px;
   }
   .time,
   .day {
@@ -251,11 +331,26 @@ div.unicorn {
     margin: 0 30px;
   }
   .lecture-logo {
-    width: 140px;
+    width: 130px;
+    margin-bottom: 20px;
   }
   header {
     padding-top: 30px;
   }
+  .icon-info:hover::before {
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 130%;
+    width: 18em;
+    top: -310%;
+    padding: 10px;
+    background: #C21010;
+    border: 1px solid white;
+  }
+  .icon-info {
+    bottom: 90px;
+  }
+
 }
 
 @media (max-width: 320px) {
@@ -268,9 +363,15 @@ div.unicorn {
     left: calc(100% - 90px);
   }
   .lecture-name {
-    font-size: 18px;
+    font-size: 20px;
   }
   .adress {
     font-size: 12px;
+  }
+  .icon-info:hover::before {
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 130%;62
+    top: -300%;
   }
 }
