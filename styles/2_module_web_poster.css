@@ -21,15 +21,12 @@ body {
   align-items: center;
 }
 .wrapper {
-  height: 82vh;
-  margin: 20px 10% 0;
-}
-.wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
   height: 90vh;
+  margin: 0 10%;
   position: relative;
 }
 .wrapper2 {
@@ -54,7 +51,7 @@ footer {
   position: relative;
 }
 header {
-  padding-top: 30px;
+  padding-top: 44px;
 }
 .time,
 .day {
@@ -72,7 +69,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 160px;
+  width: 200px;
   position: relative;
 }
 .lecture-logo_eye {
@@ -92,7 +89,7 @@ header {
 }
 .adress {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 130%;
   letter-spacing: 0.04em;
 }
@@ -184,64 +181,63 @@ div.unicorn {
   letter-spacing: 0.1em;
 }
 
-@media (min-width: 1680px) {
+@media (min-width: 1366px) {
   .adress {
     font-size: 16px;
-  }
-  .lecture-name {
-    font-size: 38px;
   }
   .time,
   .day {
     font-size: 140px;
   }
   .wrapper {
-    margin: 40px 20% 0;
+    margin: 0 20%;
   }
   .lecture-logo {
-    width: 190px;
+    width: 200px;
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1366px) {
+@media (min-width: 1024px) {
   .time,
   .day {
-    font-size: 110px;
+    font-size: 130px;
   }
   .wrapper {
-    margin: 20px 14% 0;
+    margin: 0 12%;
+  }
+  .lecture-name {
+    font-size: 38px;
   }
 }
 
 @media (max-width: 768px) {
   .adress {
-    font-size: 12px;
+    font-size: 14px;
   }
   .lecture-name {
     font-size: 26px;
   }
   .wrapper {
-    margin: 20px 50px;
+    margin: 0 12%;
   }
   .logo {
     width: 80px;
-    margin-bottom: 10px;
   }
   .lecture-logo {
-    width: 130px;
+    width: 180px;
   }
   .time,
   .day {
-    font-size: 80px;
+    font-size: 100px;
   }
 }
 
 @media (max-width: 480px) {
   .logo {
-    width: 60px;
+    width: 70px;
   }
   .lecture-name {
-    font-size: 20px;
+    font-size: 22px;
   }
   .time,
   .day {
@@ -252,10 +248,13 @@ div.unicorn {
     left: calc(100% - 120px);
   }
   .wrapper {
-    margin: 30px 30px;
+    margin: 0 30px;
   }
   .lecture-logo {
-    width: 110px;
+    width: 140px;
+  }
+  header {
+    padding-top: 30px;
   }
 }
 
