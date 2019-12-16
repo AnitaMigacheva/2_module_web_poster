@@ -104,20 +104,21 @@ header {
   filter: blur(18px);
   transition: 2s;
 } */
-div.unicorn {
+.unicorn {
   background-image: url("../img/back.jpg");
   background-size: 100%;
   background-repeat: repeat-y;
   z-index: 1;
   filter: blur(18px);
   /* transition: all 2s ease; */
-  width: 80vw;
-  height: 1000vh;
+  width: 60vw;
+  height: 10000vh;
   position: absolute;
   animation-name: translate;
-  animation-duration: 28s;
+  animation-duration: 50s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
+  margin: 0 auto;
 }
 .unicorn:hover {
   filter: none;
@@ -127,7 +128,7 @@ div.unicorn {
 
 @keyframes translate {
   100% {
-    transform: translateY(-1000px);
+    transform: translateY(-10000px);
   }
 }
 /* @keyframes filter {
