@@ -7,18 +7,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 body {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
   height: 100vh;
-  margin: 0;
   background: #C21010;
   font-family: 'Neue Machina';
   color: white;
   overflow: hidden;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .wrapper {
   display: flex;
@@ -372,7 +368,7 @@ header {
     width: 100vw;
     height: 8000vh;
     position: absolute;
-    animation: 106s linear infinite translate afterwards;
+    animation: 106s linear infinite translate;
     left: calc((100% - 100vw)/2);
   }
 }
@@ -398,12 +394,16 @@ header {
     line-height: 130%;
     top: -300%;
   }
+  .unicorn {
+    animation: 120s linear infinite translate;
+    left: calc((100% - 100vw)/2);
+  }
 }
 
-@media (max-width: 310px) and (max-width: 375px) {
+@media (min-width: 310px) and (max-width: 375px) {
   .time,
   .day {
-    font-size: 30px;
+    font-size: 60px;
   }
   .time {
     position: absolute;
@@ -420,5 +420,12 @@ header {
     font-weight: 300;
     line-height: 130%;
     top: -300%;
+  }
+  .unicorn {
+    width: 100vw;
+    height: 8000vh;
+    position: absolute;
+    animation: 120s linear infinite translate;
+    left: calc((100% - 100vw)/2);
   }
 }
