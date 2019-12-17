@@ -100,6 +100,12 @@ header {
   filter: blur(18px);
   transition: 2s;
 } */
+
+body:hover .unicorn {
+  filter: none;
+  transition: all 2s ease;
+}
+
 .unicorn {
   background-image: url("../img/back.jpg");
   background-size: 100%;
@@ -113,11 +119,12 @@ header {
   animation: 70s linear infinite translate;
   left: calc((100% - 60vw)/2);
 }
-.unicorn:hover {
-  filter: none;
-  transition: all 2s ease;
+
+/* .unicorn:hover { */
+  /* filter: none; */
+  /* transition: all 2s ease; */
   /* animation: 2s  filter; */
-}
+/* } */
 
 @keyframes translate {
   100% {
@@ -393,6 +400,8 @@ header {
     font-weight: 300;
     line-height: 130%;
     top: -300%;
+    background: #C21010;
+    border: 1px solid white;
   }
   .unicorn {
     animation: 120s linear infinite translate;
@@ -419,7 +428,10 @@ header {
     font-size: 12px;
     font-weight: 300;
     line-height: 130%;
-    top: -300%;
+    top: -100%;
+  }
+  .icon-info {
+
   }
   .unicorn {
     width: 100vw;
