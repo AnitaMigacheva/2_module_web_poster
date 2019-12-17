@@ -112,13 +112,10 @@ header {
   filter: blur(18px);
   /* transition: all 2s ease; */
   width: 60vw;
-  height: 10000vh;
+  height: 8000vh;
   position: absolute;
-  animation-name: translate;
-  animation-duration: 50s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-  margin: 0 auto;
+  animation: 70s linear infinite translate;
+  left: calc((100% - 60vw)/2);
 }
 .unicorn:hover {
   filter: none;
