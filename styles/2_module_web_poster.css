@@ -72,10 +72,7 @@ header {
 }
 .lecture-logo_text {
   width: 100%;
-  animation-name: rotation;
-  animation-duration: 9s;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
+  animation: 9s linear infinite rotation;
 }
 .adress span {
   margin-top: 20px;
@@ -168,7 +165,6 @@ body:hover .unicorn {
   opacity: 0;
 }
 
-
 @media (min-width: 1366px) and (max-width: 2900px) {
   .adress {
     font-size: 18px;
@@ -195,7 +191,7 @@ body:hover .unicorn {
     bottom: 150px;
   }
   .icon-info:hover::before {
-    top: -270%;
+    top: -300%;
   }
 }
 
@@ -358,9 +354,9 @@ body:hover .unicorn {
     padding: 10px;
   }
   .unicorn {
-    width: 200vw;
+    width: 150vw;
     animation: 106s linear infinite translate;
-    left: 0;
+    left: -120px;
   }
   .wrapper {
     margin: 0 8%;
